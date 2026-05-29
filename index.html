@@ -134,4 +134,137 @@
         /* 特徴・コンテンツグリッド */
         .grid {
             display: grid;
-            grid-template-
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #ff6b35;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #ff6b35;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666666;
+            font-size: 15px;
+        }
+
+        /* 応援メッセージフォームセクション */
+        .cheer-section {
+            background-color: #f4f7f6;
+            padding: 60px 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .cheer-section p {
+            margin-bottom: 30px;
+            color: #555555;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #222222;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+
+        footer p {
+            opacity: 0.7;
+        }
+
+        /* レスポンシブ対応（スマホサイズ調整） */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">根上を応援</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">目的</a></li>
+                    <li><a href="#activities">活動内容</a></li>
+                    <li><a href="#cheer">応援する</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>根上を応援しよう！</h1>
+        <p>私たちは、地域の魅力あふれる「根上」の街や、そこで挑戦する人々を全力で応援し、地域社会を盛り上げる活動を行っています。</p>
+        <a href="#cheer" class="btn">今すぐ応援メッセージを送る</a>
+    </section>
+
+    <main class="main-content">
+        
+        <section id="about" style="margin-bottom: 80px;">
+            <h2 class="section-title">私たちの想い</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; color: #555555; font-size: 16px; line-height: 1.8;">
+                <p>根上には、豊かな自然、伝統ある文化、そして未来へ向かって頑張るたくさんの人々がいます。</p>
+                <p>このサイトは、そんな根上の魅力を広く発信し、みんなの「応援の輪」を繋ぐために作られました。あなたの声が、地域を元気にする大きな力になります。</p>
+            </div>
+        </section>
+
+        <section id="activities">
+            <h2 class="section-title">主な取り組み</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>地域イベントの支援</h3>
+                    <p>根上エリアで開催されるお祭りやスポーツイベント、文化活動を企画・広報の両面からバックアップします。</p>
+                </div>
+                <div class="card">
+                    <h3>魅力のデジタル発信</h3>
+                    <p>SNSや特設サイトを通じて、根上の美味しいお店、素晴らしい景色、頑張る人々のストーリーを全国へ届けます。</p>
+                </div>
+                <div class="card">
+                    <h3>コミュニティの活性化</h3>
+                    <p>世代を超えて住民同士が繋がり、気軽に街の未来について話し合えるあたたかい場づくりを推進します。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cheer" class="cheer-section">
+            <h2 class="section-title">あなたも応援に参加しませんか？</h2>
+            <p>根上で活動するメンバーや、この街への熱い応援メッセージをお待ちしています！</p>
+            <a href="mailto:info@example.com?subject=根上応援メッセージ" class="btn" style="background-color: #ff6b35; color: white;">メールでメッセージを送る</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 根上を応援プロジェクト. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
